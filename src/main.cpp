@@ -47,29 +47,29 @@ namespace pvz {
         8,  // 64 @
         7,  // 65 A
         7,  // 66 B
-        7,  // 67 C
-        7,  // 68 D
+        6,  // 67 C
+        8,  // 68 D
         7,  // 69 E
         7,  // 70 F
         7,  // 71 G
-        7,  // 72 H
-        5,  // 73 I
-        7,  // 74 J
+        8,  // 72 H
+        4,  // 73 I
+        6,  // 74 J
         7,  // 75 K
-        7,  // 76 L
+        6,  // 76 L
         8,  // 77 M
         7,  // 78 N
         7,  // 79 O
         7,  // 80 P
-        8,  // 81 Q
+        7,  // 81 Q
         7,  // 82 R
-        7,  // 83 S
-        7,  // 84 T
+        6,  // 83 S
+        8,  // 84 T
         7,  // 85 U
-        7,  // 86 V
+        8,  // 86 V
         8,  // 87 W
-        7,  // 88 X
-        7,  // 89 Y
+        8,  // 88 X
+        8,  // 89 Y
         7,  // 90 Z
         5,  // 91 [
         7,  // 92
@@ -77,32 +77,32 @@ namespace pvz {
         4,  // 94 ^
         7,  // 95 _
         4,  // 96 `
-        7,  // 97 a
-        7,  // 98 b
-        7,  // 99 c
+        6,  // 97 a
+        6,  // 98 b
+        6,  // 99 c
         7,  // 100 d
-        7,  // 101 e
-        6,  // 102 f
+        6,  // 101 e
+        5,  // 102 f
         7,  // 103 g
         7,  // 104 h
         3,  // 105 i
-        4,  // 106 j
-        6,  // 107 k
-        3,  // 108 l
+        5,  // 106 j
+        7,  // 107 k
+        4,  // 108 l
         8,  // 109 m
         7,  // 110 n
-        7,  // 111 o
+        6,  // 111 o
         7,  // 112 p
-        7,  // 113 q
-        6,  // 114 r
-        7,  // 115 s
+        6,  // 113 q
+        5,  // 114 r
+        6,  // 115 s
         6,  // 116 t
         7,  // 117 u
-        7,  // 118 v
+        8,  // 118 v
         8,  // 119 w
-        7,  // 120 x
-        7,  // 121 y
-        7,  // 122 z
+        8,  // 120 x
+        8,  // 121 y
+        6,  // 122 z
         6,  // 123 {
         3,  // 124 |
         6,  // 125 }
@@ -144,7 +144,16 @@ int main()
     bn::sprite_text_generator white_text_generator(pvz::variable_8x16_font);
 
     bn::vector<bn::sprite_ptr, 32> text_sprites;
-    white_text_generator.generate(0, 0, "0123456789", text_sprites);
+    white_text_generator.generate(-85, -60, "THE QUICK BROWN FOX JUMPS", text_sprites);
+    white_text_generator.generate(-55, -44, "OVER THE LAZY DOG", text_sprites);
+
+    white_text_generator.generate(-72, -24, "the quick brown fox jumps", text_sprites);
+    white_text_generator.generate(-42, -8, "over the lazy dog", text_sprites);
+
+    white_text_generator.generate(-72, 16, "A HUGE WAVE OF ZOMBIES", text_sprites);
+    white_text_generator.generate(-42, 32, "IS APPROACHING", text_sprites);
+    
+    white_text_generator.generate(-30, 48, "0123456789", text_sprites);
 
     while(true)
     {
