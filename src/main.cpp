@@ -1,7 +1,9 @@
 #include "bn_core.h"
 #include "bn_sprite_text_generator.h" // Font generator
+#include "bn_regular_bg_ptr.h"
 
 #include "pvz_big_sprite_font.h"
+#include "bn_regular_bg_items_bg.h"
 
 int main()
 {
@@ -9,6 +11,8 @@ int main()
 
     // Creates big text generator
     bn::sprite_text_generator big_text_generator(pvz::big_sprite_font);
+
+    bn::regular_bg_ptr bg = bn::regular_bg_items::bg.create_bg(0, 0);
 
     // bn::vector<bn::sprite_ptr, 32> text_sprites;
     // big_text_generator.generate(-85, -60, "THE QUICK BROWN FOX JUMPS", text_sprites);
