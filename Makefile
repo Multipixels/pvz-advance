@@ -27,14 +27,14 @@
 #---------------------------------------------------------------------------------------------------------------------
 TARGET      :=  $(notdir $(CURDIR))
 BUILD       :=  build
-LIBBUTANO   :=  ../butano
+LIBBUTANO   :=  ../../butano
 PYTHON      :=  python
-SOURCES     :=  src ../common/src
-INCLUDES    :=  include ../common/include
+SOURCES     :=  src ../../common/src
+INCLUDES    :=  include ../../common/include
 DATA        :=
-GRAPHICS    :=  graphics ../common/graphics
-AUDIO       :=  audio ../common/audio
-DMGAUDIO    :=  dmg_audio ../common/dmg_audio
+GRAPHICS    :=  graphics ../../common/graphics
+AUDIO       :=  audio ../../common/audio
+DMGAUDIO    :=  dmg_audio ../../common/dmg_audio
 ROMTITLE    :=  PVZADV
 ROMCODE     :=  SBTP
 USERFLAGS   :=  
