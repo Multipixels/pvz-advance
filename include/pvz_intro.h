@@ -12,7 +12,7 @@ namespace bn {
 }
 
 namespace pvz {
-    class butano_background;
+    class intro_background;
 
     class intro : public scene {
         public:
@@ -22,7 +22,6 @@ namespace pvz {
 
         private:
             bn::vector<bn::sprite_ptr, 20> _text_sprites;
-            int _counter = 60*4;
     };
 }
 

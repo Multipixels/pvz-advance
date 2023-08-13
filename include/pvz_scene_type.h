@@ -4,7 +4,7 @@
 namespace pvz {
     enum class scene_type {
         INTRO,
-        TITLE,
+        MENU,
         GAME
     };
 }

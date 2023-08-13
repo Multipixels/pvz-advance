@@ -3,9 +3,11 @@
 #include "bn_unique_ptr.h"
 
 #include "pvz_intro.h"
+#include "pvz_menu.h"
 #include "pvz_game.h"
 #include "pvz_status.h"
 #include "pvz_intro_background.h"
+#include "pvz_menu_background.h"
 #include "pvz_big_sprite_font.h"
 
 // #include "bn_regular_bg_ptr.h"
@@ -31,6 +33,7 @@ int main() {
 
     //pvz::status status;
     pvz::intro_background intro_background;
+    pvz::menu_background menu_background;
     bn::unique_ptr<pvz::scene> scene(new pvz::intro(big_text_generator, intro_background));
     bn::optional<pvz::scene_type> next_scene = pvz::scene_type::INTRO;
     int wait_frames = 0;
@@ -55,6 +58,9 @@ int main() {
                 switch(*next_scene) {
                     case pvz::scene_type::INTRO:
                         scene.reset(new pvz::intro(big_text_generator, intro_background));
+                        break;
+                    case pvz::scene_type::MENU:
+                        scene.reset(new pvz::menu(big_text_generator, menu_background));
                         break;
                     default:
                         BN_ERROR("Invalid next scene: ", int(*next_scene));
